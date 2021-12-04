@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>climbing stairs probability</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var climbStairs = function(n) {
+			var f1=0;
+			var f2=1;
+			var posibilities;
+    	for (let i=0; i<n; i++) {
+    		posibilities = f1+f2;
+    		f1=f2;
+    		f2=posibilities;
+    	}
+    	return posibilities;
+
+		};
+		climbStairs(1);
+	</script>
+</body>
+</html>

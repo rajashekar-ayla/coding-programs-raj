@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Demo on prime factors</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var num=prompt("enter number");
+			num=parseInt(num);
+			var divisor=2;
+			var factors=[];
+			while(num>2){
+				if(num%divisor==0){
+					factors.push(divisor);
+					num=num/divisor;
+				}else{
+					divisor++;
+				}
+			}
+			console.log(factors);
+		</script>
+	</body>
+</html>

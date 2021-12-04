@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Demo on Amstrong number</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var n=parseInt(prompt("enter number"));
+			m=n;
+			var m,rem,sum=0;
+			while(n>0){
+				rem=n%10;
+				sum=sum+rem*rem*rem;
+				n=parseInt(n/10);
+			}
+			if(sum==m){
+				alert("amstrong number");
+			}
+			else{
+				alert("not a amstrong number");
+			}
+		</script>
+	</body>
+</html>

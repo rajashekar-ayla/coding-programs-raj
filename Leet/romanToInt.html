@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>RomanToInt</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		var romanToInt = function(s) {
+	    var romanNumerals = {
+        I:1,
+        V:5,
+        X:10,
+        L:50,
+        C:100,
+        D:500,
+        M:1000
+	    }
+	    var sum=0;
+	    for(var i=0;i<s.length; i++){
+	    	if(i===0) {
+	    		sum += romanNumerals[s[i]];
+	    		continue;
+	    	}
+	    	if(romanNumerals[s[i]] > romanNumerals[s[i-1]]){
+	    		sum -=romanNumerals[s[i-1]];
+	    		sum += romanNumerals[s[i]] - romanNumerals[s[i-1]];
+	    	} else {
+	    		sum += romanNumerals[s[i]];
+	    	}
+	    }
+	    return sum;
+		};
+		console.log(romanToInt("CMD"));
+	</script>
+</body>
+</html>

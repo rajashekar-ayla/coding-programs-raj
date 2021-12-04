@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add Binary</title>
+</head>
+<body>
+
+	<div><a href="https://leetcode.com/problems/add-binary/">Linky Leet</a></div>
+	<script type="text/javascript">
+		var addBinary = function(a, b) {
+			// if(a==="0" && b==="0"){
+			// 	return "0";
+			// }
+			// var k=1;
+   //  	var sum = 0;
+   //  	for(let i=a.length-1; i>=0; i--) {
+   //  		if(a[i] === '1') {
+   //  			sum +=k;
+   //  		}
+   //  		k = k+k;
+   //  	}
+   //  	//b
+   //  	k=1;
+   //  	for(let i=b.length-1; i>=0; i--) {
+   //  		if(b[i] === '1') {
+   //  			sum +=k;
+   //  		}
+   //  		k = k+k;
+   //  	}
+    	
+   //  	var binarySum='';
+   //  	while(BigInt(sum) >=1) {
+   //  		let rem = BigInt(sum)%2n;
+   //  		binarySum += rem;
+   //  		sum=(BigInt(sum)/2n);
+   //  	}
+   //  	console.log(binarySum.split("").reverse().join(""));
+   //  	return binarySum.split("").reverse().join("");
+   debugger;
+	   const lena = a.length
+	  const lenb = b.length
+	  const lenmin = Math.min(lena, lenb)
+	  let result = ''
+	  let carry = 0
+	  for (var i = 0; i < lenmin || carry === 1; i++) {
+	    const x = (a.charCodeAt(lena - i - 1) - 48) || 0
+	    const y = (b.charCodeAt(lenb - i - 1) - 48) || 0
+	    result = (x ^ y ^ carry) + result
+	    carry = (x & y) | (x & carry) | (y & carry)
+	  }
+	  return a.substring(0, lena - i) + b.substring(0, lenb - i) + result
+		};
+		addBinary('1010', '1011');
+// 		addBinary("10100000100100110110010000010101111011011001101110111111111101000000101111001110001111100001101",
+// "110101001011101110001111100110001010100001101011101010000011011011001011101111001100000011011110011");
+	</script>
+</body>
+</html>

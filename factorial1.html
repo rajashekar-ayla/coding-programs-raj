@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Demo on factorial of a number</title>
+	</head>
+	<body>
+	<script type="text/javascript">
+
+		function factorial(num) {
+		  debugger;
+		  var factorialSum = 1;
+		  if(num === 1) {
+		    return factorialSum;
+		  } else if(num === 0) {
+		    return 0;
+		  } else {
+		    for(var i=1; i<=num; i++) {
+		      debugger;
+		      factorialSum *= i;
+		    }
+		    return factorialSum;
+		  }
+		}
+
+		console.log(factorial(5));
+	</script>
+	</body>
+</html>

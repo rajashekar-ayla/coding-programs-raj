@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Demo on reverse of a word</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			// function reverseWord(str){
+			// 	var rev=[],
+			// 	wordLen=0;
+			// 	for(var i=str.length-1; i>=0; i--){
+			// 		if(str[i]==' ' || i==0){
+			// 			rev.push(str.substr(i,wordLen+1));
+			// 			wordLen=0;
+			// 		}else{
+			// 			wordLen++;
+			// 		}
+			// 	}
+			// 	return rev.join(' ');
+			// }
+			// alert(reverseWord('i love u'));
+
+			function revWord(str) {
+				var arr = str.split(' ');
+				var revString='';
+				for(var i=arr.length-1; i>=0; i--){
+					revString += ' '+arr[i];
+				}
+				return revString;
+			}
+			console.log(revWord('I LOVE U'));
+
+
+		</script>
+	</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>find missing Number</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function missingNumber(arr){
+				var lenth=arr.length;
+				var n=arr.length+1;
+				var sum=0,
+				expectdSum=n*(n+1)/2;
+				for(var i=0;i<lenth;i++){
+					sum +=arr[i];
+				}
+				return expectdSum-sum;
+			}
+			alert(missingNumber([6,5,4,3,2,1]));
+		</script>
+	</body>
+</html>

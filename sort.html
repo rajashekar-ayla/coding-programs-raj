@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>sort the numeric array</title>
+  </head>
+  <body>
+  <script type="text/javascript">
+    function bubbleSort(array) {
+      debugger;
+      var done = false;
+      while (!done) {
+        done = true;
+        for (var i = 1; i < array.length; i += 1) {
+          if (array[i - 1] > array[i]) {
+            done = false;
+            var tmp = array[i - 1];
+            array[i - 1] = array[i];
+            array[i] = tmp;
+          }
+        }
+      }
+
+      return array;
+    }
+
+    var numbers = [12, 10, 15];
+    bubbleSort(numbers);
+    console.log(numbers);
+
+  </script>
+  </body>
+</html>

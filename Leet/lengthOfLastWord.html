@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Length of Last Word</title>
+</head>
+<body>
+	<div><a href="https://leetcode.com/problems/length-of-last-word/">Leet link</a></div>
+	<script type="text/javascript">
+		var lengthOfLastWord = function(s) {
+			var strArr=s.trim().split(' ');
+			return strArr[strArr.length-1].length;
+			// let strArr=s.trim().split(' ');
+			// for(let i=strArr.length;i>0;i--) {
+			// 	if(strArr[i-1].length > 0) {
+			// 		return strArr[i-1].length;
+			// 	}
+			// }
+		};
+		console.log(lengthOfLastWord("luffy is still joyboy wr    "));
+	</script>
+
+</body>
+</html>

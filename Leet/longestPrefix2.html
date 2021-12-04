@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Longest prefix</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var longestCommonPrefix = function(data) {
+		    if(data.length > 0) {
+		    	let firstElement = data[0];
+		        if(firstElement.length === 0){
+		            return ""
+		        }
+		        if(data.length === 1) {
+		            return data[0]
+		        }
+				for(let i = 0; i < firstElement.length; i++) {
+					for(let j = 1; j < data.length; j++) {
+						if(firstElement.substring(0,i+1) !== data[j].substring(0,i+1)) {
+							return firstElement.substring(0,i);
+						}
+					}
+		            if(i+1 === firstElement.length) {
+						return firstElement;
+					}
+				}
+		       
+		    }
+		    else return ""
+		};
+	</script>
+</body>
+</html>

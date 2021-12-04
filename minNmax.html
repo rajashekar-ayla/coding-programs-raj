@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var num=new Array(25,65.8,6,4,98,58,7);
+			var min=num[0];
+			var max=num[0];
+			for (var i = 0; i < num.length; i++) {
+				if(min>num[i]){
+					min=num[i];
+				}
+				if(max<num[i]){
+					max=num[i];
+				}
+			}
+			alert("min num is " +min+  "max num is " +max);
+		</script>
+	</body>
+</html>

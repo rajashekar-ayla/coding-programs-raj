@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var strStr = function (s, w) {
+			debugger;
+			let len = s.length - w.length + 1;
+			for(let i=0; i<len; i++){
+				let j,k;
+				for(j=i,k=0;k<w.length;j++){
+					if(s[j] !== w[k]){
+						break;
+					} else{
+						++k;
+					}
+				}
+				if(k===w.length) {
+					return i;
+				}
+			}
+			return -1
+		}
+		console.log(strStr("abc", "c"));
+	</script>
+</body>
+</html>

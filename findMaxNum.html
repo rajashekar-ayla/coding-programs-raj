@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Find Max Number</title>
+</head>
+<body>
+  <script type="text/javascript">
+    function findMaxNum(numArr) {
+      var done = false;
+      var len = numArr.length;
+      while(!done) {
+        done=true;
+        for(var i=1; i<len; i++) {
+          if(numArr[i] < numArr[i-1]){
+            done=false;
+            var temp= numArr[i];
+            numArr[i]=numArr[i-1];
+            numArr[i-1]=temp;
+          }
+        }
+      }
+      return numArr[len-1];
+    }
+    var arr=[36, 3, 6,72,56,49];
+    console.log(findMaxNum(arr));
+  </script>
+</body>
+</html>

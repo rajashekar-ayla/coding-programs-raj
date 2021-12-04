@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Single Num</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var singleNumber = function(nums) {
+    	var exist = {};
+    	for (let i=0; i<nums.length; i++) {
+    		if(exist[nums[i]] || exist[nums[i]] === 0) {
+    			delete exist[nums[i]]
+    		} else {
+    			exist[nums[i]] = nums[i];
+    		}
+    	}
+    	console.log(exist[Object.keys(exist)[0]]);
+		};
+		singleNumber([349,-999,0,-810,349,-999,0]);
+	</script>
+</body>
+</html>

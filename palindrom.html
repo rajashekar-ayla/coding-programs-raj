@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Demo on palindrome or not</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var str=prompt("enter string");
+			var len=str.length;
+			var rev='';
+			
+			for(var i=len; i>=0; i--){
+				rev +=str.charAt(i);
+			}
+			if(str==rev){
+				alert("palindrome");
+			}else{
+				alert("not a palindrome");
+			}	
+		
+		</script>
+	</body>
+</html>

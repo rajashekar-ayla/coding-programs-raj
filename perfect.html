@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Perfect Number or Not</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var n=parseInt(prompt("enter n value"));
+			var sum=0,
+			i=1;
+			debugger;
+			while(i<=n/2){
+				if(n%i==0)
+				sum=sum+i;
+				i++;
+			}
+			if(sum==n){
+				alert("perfect Number");
+			}else{
+				alert("not a perfct number");
+			}
+
+		</script>
+	</body>
+</html>
+

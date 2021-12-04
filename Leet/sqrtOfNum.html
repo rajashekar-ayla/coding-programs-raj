@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Square  root of Number</title>
+</head>
+<body>
+	<div><a href="https://leetcode.com/problems/sqrtx/">Leet link</a></div>
+	<script type="text/javascript">
+		var mySqrt = function(n) {
+    if(n===0) return 0;
+    var x=n;
+    for(var i=0; i<20; i++){
+        x=(x+n/x)/2;
+    }
+    return Math.floor(x);
+	};
+	mySqrt(64);
+	</script>
+</body>
+</html>

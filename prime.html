@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Demo on check prime num or not</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var num=prompt("enter number");
+			num=parseInt(num);
+			var divisor=2;
+			
+			function primeNum(num){
+				while(num > divisor){
+				if(num%divisor==0){
+					return true;
+				}
+					divisor++;
+			}
+			
+			return true;
+			}
+			alert(primeNum(num));
+		</script>
+	</body>
+</html>

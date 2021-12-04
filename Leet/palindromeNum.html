@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Palindrome or not</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var isPalindrome = function(x) {
+		 //    var numString = x.toString();
+		 //    var revString = numString.split('').reverse().join('');
+		 //    if(revString === numString) {
+		 //    	return true;
+		 //    } else {
+		 //    	return false;
+		 //    }
+
+		 		var numString = x.toString();
+		    var revString = "";
+		    for (var i = numString.length - 1; i >= 0; i--) {
+		        revString += numString[i];
+		    }
+		    if(revString === numString) {
+		    	return true;
+		    } else {
+		    	return false;
+		    }
+		};
+		console.log(isPalindrome(11211));
+	</script>
+</body>
+</html>

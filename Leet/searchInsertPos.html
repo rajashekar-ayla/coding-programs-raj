@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Search Insert Position</title>
+</head>
+<body>
+	<div><a href="https://leetcode.com/problems/search-insert-position/">Linky Leet</a></div>
+	<script type="text/javascript">
+		var searchInsert = function(nums, target) {
+    	for(let i=0; i<nums.length; i++) {
+    		if(nums[i] === target || nums[i] > target) {
+    			return i;
+    		} else if (nums[i+1] === undefined){
+    			return nums.length;
+    		}
+    	}
+    	return 0;
+		};
+		console.log(searchInsert([1], 1));
+	</script>
+</body>
+</html>

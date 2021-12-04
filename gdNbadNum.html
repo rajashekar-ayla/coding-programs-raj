@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Demo on find its gd num or Not</title>
+	</head>
+	<body>
+	<script type="text/javascript">
+		var n=prompt("enter n value"); 
+		var arr=[];
+		if(isNaN(n)){
+			alert("its not a number");
+		}else{
+			function GdNdBd(n){
+				var res1=n.toString();
+				arr.push(res1);
+				var res=0;
+				for(var i=0;i<res1.length; i++){
+				   var res =res + (res1[i]*res1[i]);
+				}
+				n=res;
+				if(n==0 || n==1){
+					return alert("good number");
+				}else{
+					for(var j=0; j<arr.length;j++){
+						if(n==arr[j]){
+							return alert(arr+" ," +n+ " bad number");
+						}
+					}
+				}
+				if(n!=0 || n!=1){
+						GdNdBd(n);
+					}
+			}
+		}
+		GdNdBd(n);
+	</script>
+	</body>
+</html>

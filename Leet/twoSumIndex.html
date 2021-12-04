@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Two sum: retun indexes</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var twoSum = function(numbers, target) {
+            debugger;
+			// var finalSum=0;
+			// var indexArr = [1];
+   //          var i=0;
+   //              while(indexArr.length !== 2) {
+   //                  for(i;i<numbers.length; i++){
+   //                      finalSum += numbers[i];
+   //                      // indexArr.push(i+1);
+   //                      if(i===0) continue;
+   //                      if(finalSum !== target) {
+   //                          finalSum -= numbers[i];
+   //                          // indexArr.splice(i, 1)
+   //                      } else {
+   //                          indexArr.push(i+1);
+   //                      }
+   //                  }
+   //                  if(indexArr.length !== 2) {
+   //                      indexNum = indexArr[0] + 1;
+   //                      indexArr = [indexNum];
+   //                      i++;
+   //                  } else {
+   //                      return indexArr;
+   //                  }
+   //              }
+               var finalSum;
+                var indexArr = [1];
+                var len = numbers.length;
+                function twoSumInner(){
+                    finalSum =0;
+                    for(let i=0;i<numbers.length; i++){
+                        finalSum += numbers[i];
+                        // indexArr.push(i+1);
+                        if(i===0) continue;
+                        if(finalSum !== target) {
+                            finalSum -= numbers[i];
+                            // indexArr.splice(i, 1)
+                        } else {
+                            indexArr.push(i+1);
+                        }
+                    }
+                }
+                twoSumInner();
+                var incr = 0
+                if(len !== numbers.length){
+                    incr = len-numbers.length;
+                }
+                if(indexArr.length !== 2) numbers.splice(0,1);
+                return indexArr.length !== 2 ? twoSumInner() : [indexArr[0+incr], indexArr[1+incr]];
+    		};
+		console.log(twoSum([5,25,75], 100));
+	</script>
+</body>
+</html>

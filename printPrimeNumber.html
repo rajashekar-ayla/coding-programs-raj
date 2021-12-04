@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Print Prime Numbers</title>
+</head>
+<body>
+
+  <script type="text/javascript">
+    function printPrimeNums(fromNum, toNum) {
+      if(fromNum<2){
+        fromNum=2;
+      }
+      
+      if (toNum >= fromNum) {
+        var outArr=[];
+        for (var i=fromNum;i<=toNum;i++) {
+          var divisor=2;
+          var flag=true;
+          while(i>divisor){
+            if(i%divisor === 0){
+              flag=false;
+              break;
+            } else {
+              divisor++
+            }
+          }
+          if(flag){
+            outArr.push(i);
+          }
+        }
+        return outArr;
+      } else {
+        alert("please check the inputs");
+      }
+    }
+    console.log(printPrimeNums(5, 100));
+  </script>
+</body>
+</html>

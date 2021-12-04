@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Demo on remove duplicate</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			// function removeDuplicates(str){
+			//   var outArr=[];
+			//   var existEle={},
+			//       element;
+			//   for(var i=0; i<str.length; i++) {
+			//     element=str[i];
+			//     if(!existEle[element]) {
+			//       outArr.push(element);
+			//       existEle[element]=true;
+			//     }
+			//   }
+			//   return outArr;
+			// }
+			// var str="bbfgddhhtttee"
+			// console.log(removeDuplicates(str));
+			function onlyUnique(value, index, self) {
+			  return self.indexOf(value) === index;
+			}
+
+			// usage example:
+			var a = ['a', 1, 'a', 2, '1'];
+			var unique = a.filter(onlyUnique);
+
+			console.log(unique); // ['a', 1, 2, '1']
+
+			function removeDuplicates(str){
+			  var outArr=[];
+			  var existEle={},
+			      element;
+			  for(var i=0; i<str.length; i++) {
+			    element=str[i];
+			    if(!existEle[element]) {
+			      outArr.push(element);
+			      existEle[element]=true;
+			    }
+			  }
+			  return outArr;
+			}
+			var str="bbfgddhhtttee"
+			console.log(removeDuplicates(str));
+
+		</script>
+	</body>
+</html>

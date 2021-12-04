@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Remove duplicates</title>
+</head>
+<body>
+  <script type="text/javascript">
+    var removeDuplicates = function(nums) {
+      debugger
+      nums.sort(
+        function(a, b)
+          {
+            return a-b;
+          }
+        );
+        if (nums.length === 0) return 0;
+        let i = 0;
+        let j = 1;
+        while (j < nums.length) {
+          if(nums[j] !== nums[i]) {
+             i++;
+              nums[i] = nums[j];
+             } else j++
+        }
+        return nums.slice(0, i+1)
+      };
+
+      console.log(removeDuplicates([1,2,2]));
+      </script>
+</body>
+</html>

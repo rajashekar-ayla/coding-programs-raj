@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Max SubArray</title>
+</head>
+<body>
+	<div><a href="https://leetcode.com/problems/maximum-subarray/">Leet link</a></div>
+	<script type="text/javascript">
+		var maxSubArray = function(nums) {
+			var cSum=0;
+			var tSum=0;
+			var maxNegative;
+    	for(i=0;i<nums.length;i++) {
+    		tSum = tSum>0 ? tSum : 0;
+    		tSum += nums[i];
+    		if(tSum>cSum) {
+    			cSum = tSum;
+    		}
+    		if(nums[i]<0 && (nums[i]>maxNegative || !maxNegative)){
+    			maxNegative = nums[i];
+    		}
+    		if((cSum===0) && (tSum<0) && (nums.length===i+1)) {
+    			cSum = nums.includes(0) ? 0 : maxNegative;
+    		}
+    	}
+    	return cSum;
+		};
+		console.log(maxSubArray([-3,-2,-2,-3]));
+	</script>
+</body>
+</html>

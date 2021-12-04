@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test pro</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function sortNumArr(arr) {
+			debugger;
+			var done = false;
+			var len = arr.length;
+			while(!done) {
+				done = true;
+				for (var i=0; i<len; i++) {
+					if(arr[i-1] > arr[i]) {
+						var temp = arr[i-1];
+						done = false;
+						arr[i - 1] = arr[i];
+						arr[i] = temp;
+					}
+				}
+			}
+			console.log(arr);
+
+		};
+		sortNumArr([3,4,5,2,9,6,4,12,1,0,-1,33]);
+	</script>
+</body>
+</html>

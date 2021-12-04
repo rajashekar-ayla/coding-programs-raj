@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Strong number or not</title>
+		<script type="text/javascript">
+			var n=prompt("enter number");
+			var arr=[];
+			var factorial=0;
+			function fact(n){
+				var v= n.toString();
+				for(var i=0; i<v.length;i++){
+                   var a=parseInt(v[i]);
+                  alert(a);
+					function strong(a){
+						if(a==0){
+					     factorial=1 ;
+				       }    
+				            else {
+					      return (factorial=(a * strong(a-1)));
+				            }
+
+					 }
+					 arr.push(factorial);
+					strong(a);
+				}
+				alert(arr);
+				
+			}
+			fact(n);
+		</script>
+	</head>
+	<body>
+
+	</body>
+</html>

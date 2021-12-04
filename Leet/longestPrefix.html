@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Find longest prefix</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var longestCommonPrefix = function(strs) {
+    	var done = strs.length > 1 ? false : true;
+    	var outArr=[];
+    	var index = 0;
+    	var breakFlag=false;
+    	while(!done) {
+    		for(var i=0; i<=strs.length-1; i++){
+    			if(outArr.length >= 1){
+    				if(index>=1) {
+    					if(i===0){
+    						outArr[i] += strs[i].charAt(index);
+    					} else {
+    						if (strs[i].charAt(index) === outArr[i-1].charAt(index)) {
+    							outArr[i] += strs[i].charAt(index);
+    						} else {
+    							done = true;
+    							breakFlag = true;
+	    						break;
+    						}
+    					}
+    					
+    				} else {
+    					if(strs[i].charAt(index) === outArr[outArr.length-1]) {
+	    					outArr.push(strs[i].charAt(index));
+	    				} else {
+	    					done = true;
+	    					breakFlag = true;
+	    					break;
+	    				}
+    				}
+    			} else {
+    				outArr.push(strs[i].charAt(index));
+    			}	
+    		}
+    		if(!breakFlag) {
+    			done=(outArr[0].length === strs[0].length) ? true : false;
+    		}
+    		index +=1;
+    	}
+        debugger;
+    	return (outArr.length === strs.length) ? outArr[outArr.length-1] : '';
+		};
+		var arrStrings = ["flower","fli"];
+		console.log(longestCommonPrefix(arrStrings));
+	</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>print primes</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+						
+		
+
+		function display(n) {
+		    var arr = [2];
+		    for ( var i = 3; i < n; i+=2 ) {
+		       var divisor=2;
+		       while(i>divisor){
+		       	if(i%divisor==0){
+		       		break;
+		       	}else{
+		       		divisor++;
+		       	}
+		       }
+		       arr.push(i);
+		    }
+		    console.log(arr); 
+		}
+
+		display(100);
+		</script>
+	</body>
+</html>
